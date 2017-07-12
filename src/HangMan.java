@@ -7,5 +7,20 @@ public class HangMan {
 
     public static void main(String[] args) {
         Game game = new Game ("abundant");
+        hits = "";
+        misses = "";
     }
+
+    public boolean applyGuess(char letter) {
+        boolean isHit = answer.indexOf(letter) != -1;
+        if (isHit) {
+            hits += letter;
+        } else {
+            misses += letter;
+        }
+      return isHit;
+
+    }
+
+
 }

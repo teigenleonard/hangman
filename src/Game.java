@@ -4,6 +4,8 @@
 // This class maintains the game logic
 public class Game {
     private String answer;
+    private String hits;
+    private String misses;
 
     public Game(String answer) {
         this.answer = answer;
