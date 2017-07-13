@@ -7,20 +7,12 @@ public class HangMan {
 
     public static void main(String[] args) {
         Game game = new Game ("abundant");
-        hits = "";
-        misses = "";
-    }
-
-    public boolean applyGuess(char letter) {
-        boolean isHit = answer.indexOf(letter) != -1;
+        Prompter prompter = new Prompter(game);
+        boolean isHit = prompter.promptForGuess();
         if (isHit) {
-            hits += letter;
+            System.out.println("Yes!");
         } else {
-            misses += letter;
+            System.out.println("Hmmmm, nice try but guess again.");
         }
-      return isHit;
-
     }
-
-
 }
